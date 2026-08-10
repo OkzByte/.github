@@ -50,7 +50,7 @@
 
 ## 🌐 Official Channels & Links
 
-- 🌐 **Web App Platform:** [https://orakzai-properties-api-server.vercel.app](https://orakzai-properties-api-server.vercel.app)
+- 🌐 **Web App Platform:** [https://OkzByte.com)
 - 📧 **Official Support:** info@orakzaibond.com
 - 🏢 **Organization:** Orakzai Group
 
