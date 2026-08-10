@@ -96,6 +96,55 @@ The flagship product — **Orakzai Properties** — is a production-grade **Exch
 
 ---
 
+## 🧭 User Journeys
+
+| Persona | Journey | Key Screens |
+|---|---|---|
+| 🏠 **Home Buyer / Seller** | Browse properties → view details → post a listing → manage my properties → book or subscribe for extra listings | `Browse` · `PropertyDetail` · `PostProperty` · `MyProperties` · `Bookings` |
+| 📈 **Investor** | KYC onboarding → invest fractionally in projects → track portfolio → stake in RWA vaults → join launchpad | `KYC` · `InvestPortal` · `Portfolio` · `RwaStaking` · `Launchpad` |
+| ⚡ **Trader** | Open trading floor → watch live order book & candles → place orders → monitor trades & price alerts | `TradingFloor` · `Markets` · `Trade` · `P2P` · `PriceAlerts` · `TradingPortfolio` |
+| 💳 **Payer** | Deposit crypto → send/receive OkzByte Pay → withdraw on-chain → download receipts | `Wallet` · `OkzBytePaySend` · `OkzBytePayReceive` · `CryptoDepositFlow` · `CryptoWithdrawFlow` |
+| 🤝 **Real Estate Agent** | Agent dashboard → receive leads → call logs → chat with clients → manage settings | `AgentDashboard` · `Inbox` · `ChatRoom` · `Services` |
+| 🛡️ **Platform Admin** | Approve KYC → configure platform → oversee users, listings & subscriptions | `AdminPanel` · `AdminKYC` · `AdminConfig` · `Pricing` |
+
+---
+
+## 🛡️ Security & Compliance Posture
+
+- **KYC-gated access** — trading and investment flows locked behind identity verification (`KYCGateModal`)
+- **Wallet PIN protection** — 4-digit PIN set/verify on every sensitive wallet operation
+- **Escrow-protected P2P** — peer-to-peer settlement with secured escrow flow
+- **Organization governance** — hardened GitHub org: default permission `none`, owner-only repository management, mandatory commit sign-off, no member repo creation or deletion
+- **Audit trails** — investments ledger, wallet transactions, call logs and notification history stored in PostgreSQL
+- **Secret hygiene** — secrets never committed; secret scanning and Dependabot alerts recommended at org level
+
+---
+
+## 🗺️ Roadmap Highlights
+
+- **OKBOND Protocol GA** — full DeFi yield framework deployment on Polygon
+- **On-chain settlement** — direct ERC-20 / ERC-721 / ERC-1155 property token transfers
+- **AI trading bots** — grid, DCA and quantitative strategy bots for verified users
+- **Mobile PWA / Native apps** — complete OkzByte mobile UI (already in design system)
+- **Global fiat corridors** — expanded multi-currency P2P gateways
+
+---
+
+## ⚡ Quick Start (Developers)
+
+```bash
+git clone https://github.com/faisalorakzai-lab/Orakzai-Properties.git
+cd Orakzai-Properties
+pnpm install
+pnpm --filter @workspace/api-server run dev   # API on port 5000
+pnpm -r --filter "./artifacts/orakzai-properties" run dev  # frontend
+pnpm run typecheck                            # full monorepo typecheck
+```
+
+*Requires Node.js ≥20.11, pnpm ≥10 and a PostgreSQL `DATABASE_URL`.*
+
+---
+
 ## 🛠️ Tech Stack & Ecosystem
 
 - **Blockchain:** Polygon Protocol, Solidity Smart Contracts, ERC-20 / ERC-721 / ERC-1155 Token Standards
